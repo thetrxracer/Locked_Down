@@ -4,6 +4,7 @@
     <string name="User">User Page</string>
     <string name="Sensor">Sensor</string>
     <string name="Sensor_Page">Sensor</string>
-
+    <string name="Submit">Submit</string>
+    <string name="Press_to_Submit">Submit</string>
 
 </resources>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Locked Down</string>
+    <string name="User_Management">User Page</string>
+    <string name="User">User Page</string>
+    <string name="Sensor">Sensor</string>
+    <string name="Sensor_Page">Sensor</string>
+
+
 </resources>

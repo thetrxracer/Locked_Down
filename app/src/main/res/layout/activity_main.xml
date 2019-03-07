@@ -36,4 +36,13 @@
         android:text="@string/Sensor"
         app:layout_constraintEnd_toEndOf="@+id/User_Management"
         app:layout_constraintTop_toBottomOf="@+id/User_Management" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="210dp" />
+
 </android.support.constraint.ConstraintLayout>

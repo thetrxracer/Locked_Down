@@ -10,6 +10,7 @@ import com.example.lockeddown.R;
 import com.google.android.gms.common.util.Base64Utils;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,10 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
         mSensors = (Button) findViewById(R.id.Sensor_Page);
         //Submit is the button that pushes to Firebase
         mSubmit = (Button) findViewById(R.id.submit_button);
+
         mFirebase = FirebaseDatabase.getInstance().getReference();
+
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,12 +46,16 @@ public class MainActivity extends AppCompatActivity {
                 //Right now it sets the value to the string in the parenthesis
                 //Next we will pass it a string to set in the database
                 //string
-                mFirebase.child("Project Name").setValue("Locked Down!");
+                UUID uuid = UUID.randomUUID();  //Creates a random id
+                String userId = uuid.toString();    //turns the id into a string
+                User user = new User("Joshua","Nunez","jnune011@plattsburgh.edu", "*******");
+                mFirebase.child("Users").child(userId).setValue(user);
 
             }
         });
 
 
     }
+
 }
 

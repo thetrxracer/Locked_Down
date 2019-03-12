@@ -21,10 +21,10 @@ public class User {
 
     //Everything from here down might become useful later on.
     public String getfirstName() {
-         return firstName;
+        return firstName;
     }
 
-   public void setfirstName(String firstName) {
+    public void setfirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -32,8 +32,8 @@ public class User {
         return lastName;
     }
 
-    public void setlastName(String lastName) {
-        this.lastName = lastName;
+    public void setlastName(String LastName) {
+        this.lastName = LastName;
     }
 
     public String getEmail() {

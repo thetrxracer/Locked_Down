@@ -6,5 +6,9 @@
     <string name="Sensor_Page">Sensor</string>
     <string name="Submit">Submit</string>
     <string name="Press_to_Submit">Submit</string>
+    <string name="Make_First_Name">First Name</string>
+    <string name="Make_Last_Name">Last Name</string>
+    <string name="Make_Email">Enter Email Address</string>
+    <string name="Make_Password">Enter Password</string>
 
 </resources>

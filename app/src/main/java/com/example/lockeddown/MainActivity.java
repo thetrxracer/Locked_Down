@@ -15,7 +15,6 @@ import java.util.UUID;
 public class MainActivity extends AppCompatActivity {
 
     private Button mUser_Management;
-    private Button mSensors;
     private Button mSubmit;
     private DatabaseReference mFirebase;
 
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mSensors = (Button) findViewById(R.id.Sensor_Page);
         mSubmit = (Button) findViewById(R.id.submit_button);
         mFirebase = FirebaseDatabase.getInstance().getReference();
 

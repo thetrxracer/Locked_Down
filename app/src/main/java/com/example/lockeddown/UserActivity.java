@@ -50,9 +50,7 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //This adds the name to the database
-                //Right now it sets the value to the string in the parenthesis
                 //Next we will pass it a string to set in the database
-                //string
                 UUID uuid = UUID.randomUUID();  //Creates a random id
                 String userId = uuid.toString();//turns the id into a string
 
@@ -66,8 +64,8 @@ public class UserActivity extends AppCompatActivity {
                 mViewEmail.setText(email); //put the text string in a variable.
                 mViewPassword.setText(password); //put the text string in a variable.
 
-                User user = new User(first, last, email, password);
-                mFirebase.child("Users").child(userId).setValue(user);
+                User user = new User(first, last, email, password); //create new user.
+                mFirebase.child("Users").child(userId).setValue(user); //pushes the information to the database.
 
 
             }

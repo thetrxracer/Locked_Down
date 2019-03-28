@@ -5,9 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.lockeddown.R;
 import com.google.android.gms.common.util.Base64Utils;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import java.util.UUID;
@@ -17,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mUser_Management;
     private Button mSubmit;
     private DatabaseReference mFirebase;
+    private EditText mEmail_Login;
+    private EditText mPassword_Login;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -26,15 +34,32 @@ public class MainActivity extends AppCompatActivity {
         mUser_Management = (Button) findViewById(R.id.User_Management);
         mUser_Management.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Moving to User Management", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, UserActivity.class);
                 startActivity(i);
             }
         });
 
         mSubmit = (Button) findViewById(R.id.submit_button);
-        mFirebase = FirebaseDatabase.getInstance().getReference();
+        mSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Submission pending", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mEmail_Login = (EditText) findViewById(R.id.email_login);
+        mPassword_Login = (EditText) findViewById(R.id.password_login);
+        mAuth = FirebaseAuth.getInstance();
+    }
+
+
+    private void updateUI(FirebaseUser currentUser) {
+
+    }
+    ///mFirebase = FirebaseDatabase.getInstance().getReference();
 
 
     }
-}
+
 

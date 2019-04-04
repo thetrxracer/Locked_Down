@@ -9,8 +9,9 @@ import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseAuth;
 
-import java.util.UUID;
+
 
 public class UserActivity extends AppCompatActivity {
 
@@ -51,8 +52,9 @@ public class UserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //This adds the name to the database
                 //Next we will pass it a string to set in the database
-                UUID uuid = UUID.randomUUID();  //Creates a random id
-                String userId = uuid.toString();//turns the id into a string
+                //UUID uuid = UUID.randomUUID();  //Creates a random id
+                //String userId = uuid.toString();//turns the id into a string
+                String userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                 String first = mFirstName.getText().toString(); //turns the text into a string, to work with User class.
                 String last = mLastName.getText().toString(); //turns the text into a string, to work with User class.
@@ -65,7 +67,7 @@ public class UserActivity extends AppCompatActivity {
                 mViewPassword.setText(password); //put the text string in a variable.
 
                 User user = new User(first, last, email, password); //create new user.
-                mFirebase.child("Users").child(userId).setValue(user); //pushes the information to the database.
+                mFirebase.child("Users").child(userid).setValue(user); //pushes the information to the database.
 
 
             }

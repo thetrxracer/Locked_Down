@@ -10,5 +10,6 @@
     <string name="Make_Last_Name">Last Name</string>
     <string name="Make_Email">Enter Email Address</string>
     <string name="Make_Password">Enter Password</string>
+    <string name="Press__To_Login">Login</string>
 
 </resources>

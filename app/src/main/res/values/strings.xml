@@ -3,8 +3,8 @@
     <string name="User_Management">User Page</string>
     <string name="User">User Page</string>
     <string name="Submit">Submit</string>
-    <string name ="email_login">Enter email</string>
-    <string name ="password_login">Enter password</string>
+    <string name="email_login">Enter email</string>
+    <string name="password_login">Enter password</string>
     <string name="Press_to_Submit">Submit</string>
     <string name="Make_First_Name">First Name</string>
     <string name="Make_Last_Name">Last Name</string>

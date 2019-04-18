@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mEmail_Login;
     private EditText mPassword_Login;
     private FirebaseAuth mAuth;
-
+    private Button mSensor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
         mEmail_Login = (EditText) findViewById(R.id.email_login);
         mPassword_Login = (EditText) findViewById(R.id.password_login);
         mAuth = FirebaseAuth.getInstance();
+
+        mSensor = (Button) findViewById(R.id.sensor_button);
+        mSensor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Moving to Sensor page", Toast.LENGTH_SHORT).show();
+                Intent j = new Intent(MainActivity.this, SensorActivity.class);
+                startActivity(j);
+            }
+        });
     }
 
 

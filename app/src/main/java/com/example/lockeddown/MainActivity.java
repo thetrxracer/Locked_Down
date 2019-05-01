@@ -40,16 +40,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mSubmit = (Button) findViewById(R.id.submit_button);
-        mSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Submission pending", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        mEmail_Login = (EditText) findViewById(R.id.email_login);
-        mPassword_Login = (EditText) findViewById(R.id.password_login);
         mAuth = FirebaseAuth.getInstance();
 
         mSensor = (Button) findViewById(R.id.sensor_button);

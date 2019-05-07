@@ -11,8 +11,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="93dp"
         android:text="Welcome to the User Management Page "
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/Make_First_Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,40 +33,45 @@
 
     <EditText
         android:id="@+id/Make_First_Name"
+        android:layout_width="387dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginBottom="186dp"
+        android:hint="Enter your First Name"
+        app:layout_constraintBottom_toTopOf="@+id/Make_Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Make_Last_Name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
-        android:layout_marginBottom="42dp"
-        android:hint="Enter your First Name"
-        app:layout_constraintBottom_toTopOf="@+id/Make_Last_Name"
-        app:layout_constraintEnd_toEndOf="@+id/Make_Email"
-        app:layout_constraintStart_toEndOf="@+id/Press_to_Submit" />
-
-    <EditText
-        android:id="@+id/Make_Last_Name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="256dp"
-        android:layout_marginLeft="256dp"
         android:layout_marginBottom="28dp"
         android:hint="Enter your Last Name"
         app:layout_constraintBottom_toTopOf="@+id/Make_Email"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Make_First_Name" />
 
     <EditText
         android:id="@+id/Make_Email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="315dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="33dp"
         android:hint="Enter an Email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/Make_Password"
-        app:layout_constraintStart_toStartOf="@+id/Make_Last_Name"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintBottom_toTopOf="@+id/Make_Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Make_Last_Name" />
 
     <Button
         android:id="@+id/Press_to_Submit"
@@ -71,22 +81,19 @@
         android:text="@string/Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Make_Password" />
 
     <EditText
         android:id="@+id/Make_Password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:inputType="textPassword"
+        android:layout_marginBottom="240dp"
         android:hint="Enter a Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Make_Last_Name"
-        app:layout_constraintTop_toBottomOf="@+id/Make_Email" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Make_First_Name" />
 
 </android.support.constraint.ConstraintLayout>

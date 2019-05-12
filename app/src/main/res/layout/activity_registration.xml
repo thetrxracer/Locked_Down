@@ -91,11 +91,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="151dp"
         android:layout_marginBottom="45dp"
-        android:src="@drawable/lockeddown"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+// android:src="@drawable/lockeddown"/>
 
 </android.support.constraint.ConstraintLayout>
